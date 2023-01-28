@@ -36,14 +36,14 @@
 // | BTCLR | BT1   | BT2   |  BT3  |  BT4 |  BT5 |                   |      |       |       |      |       |       |
 // |       |       |       |       |      |      |                   |      |       |       |      |       |       |
 // |       |       |       |       |      |      |                   |      |       |       |      |       |       |
-// |       | PrON  | PrOFF | PrTGL |      |      |        |  |       |      |       |       |      |       |       |
+// | PrTGL |       |       |       |      |      |        |  |       |      |       |       |      |       |       |
 //                         |       |      |      |        |  |       |      | DEL   |       |
 			bindings = <
-&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
-&trans     &trans           &trans            &trans            &trans       &trans                       &trans    &trans    &trans          &trans    &trans    &trans
-&trans     &trans           &trans            &trans            &trans       &trans                       &trans    &trans    &trans          &trans    &trans    &trans
-&trans     &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &trans       &trans    &trans   &trans    &trans    &trans    &trans          &trans    &trans    &trans
-                                              &trans            &trans       &trans    &trans   &trans    &trans    &kp DEL   &trans
+&bt BT_CLR        &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
+&trans            &trans           &trans            &trans            &trans       &trans                       &trans    &trans    &trans          &trans    &trans    &trans
+&trans            &trans           &trans            &trans            &trans       &trans                       &trans    &trans    &trans          &trans    &trans    &trans
+&ext_power EP_TOG &trans           &trans            &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans          &trans    &trans    &trans
+                                                     &trans            &trans       &trans    &trans   &trans    &trans    &kp DEL   &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
